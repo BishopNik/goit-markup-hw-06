@@ -31,7 +31,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   margin: 0;
 }
 
@@ -689,7 +690,7 @@ a {
 
 .icon-modal {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: black;
+  fill: currentColor;
 }
 
 .modal-close:hover .icon-modal,
@@ -719,8 +720,15 @@ a {
 .button-subscribe {
   display: inline-flex;
   padding: 8px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   background-color: var(--butt-color);
   color: var(--color-white);
+}
+
+.button-subscribe:hover {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--butt-color-hover);
 }
 
 .button-subscribe-text {
@@ -756,7 +764,6 @@ a {
 }
 
 .modal-nametext {
-  width: 360px;
   height: 24px;
   margin-top: 72px;
   margin-bottom: 16px;
@@ -781,10 +788,10 @@ a {
 }
 
 .modal-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 4px;
-  position: relative;
 }
 
 .modal-name-field {
@@ -795,30 +802,34 @@ a {
 }
 
 .modal-type-field {
-  width: 360px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   height: 40px;
 }
 
-.modal-field::before {
+.modal-field-icon {
   position: absolute;
-  content: '';
-  width: 12px;
-  height: 12px;
-  top: 0;
-  left: 0;
-  background-color: #31d0aa;
+  top: 50%;
+  left: 19px;
+  padding: 0;
+  margin: 0;
 }
 
-.modal-type-field > textarea {
-  margin-bottom: 16px;
-  width: 360px;
+.modal-type-field:focus {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--butt-color);
+}
+
+.modal-type-field:focus + .modal-field-icon svg {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--butt-color);
+}
+
+.modal-field > textarea {
+  box-sizing: border-box;
+  resize: none;
   height: 120px;
-}
-
-input {
-  width: 360px;
-  height: 40px;
-  padding: 11px 11px 11px 38px;
+  padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   font-size: 12px;
@@ -826,22 +837,9 @@ input {
   letter-spacing: 0.04em;
 }
 
-input[type='checkbox'] {
-  padding: 0;
-  margin: 0;
-  width: 16px;
-  height: 16px;
-}
-
-input:active {
-  border: 1px solid var(--butt-color);
-}
-
-textarea {
-  box-sizing: border-box;
-  width: 360px;
-  height: 120px;
-  padding: 8px 16px;
+.modal-field > input {
+  height: 40px;
+  padding: 11px 11px 11px 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   font-size: 12px;
@@ -857,6 +855,35 @@ textarea {
   margin-left: 24px;
   margin-right: 24px;
   margin-bottom: 16px;
+}
+
+.modal-field > .modal-field-checkbox {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.modal-checkbox-icon svg {
+  position: absolute;
+  color: var(--butt-color);
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+.modal-field-checkbox:not(:checked) + .modal-checkbox-icon svg {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-field-checkbox:checked + .modal-checkbox-icon svg {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal-text-privacy {
@@ -881,6 +908,7 @@ textarea {
 }
 
 .modal-send {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 169px;
   height: 56px;
   background-color: var(--butt-color);
@@ -894,5 +922,6 @@ textarea {
 }
 
 .modal-send:hover {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--butt-color-hover);
 }

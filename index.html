@@ -68,30 +68,68 @@
             <form action="" class="modal-form">
               <div class="modal-field">
                 <label class="modal-name-field" for="name">Name</label>
-                <input class="modal-type-field" type="text" name="name" id="name" />
+                <input class="modal-type-field" type="text" name="name" placeholder=" " id="name" />
+                <p class="modal-field-icon">
+                  <svg class="icon-modal" width="12px" height="12px">
+                    <use href="./images/icons.svg#icon-name"></use>
+                  </svg>
+                </p>
               </div>
               <div class="modal-field">
                 <label class="modal-name-field" for="phone">Phone</label>
-                <input class="modal-type-field" type="tel" name="phone" id="phone" />
+                <input
+                  class="modal-type-field"
+                  type="tel"
+                  name="phone"
+                  placeholder=" "
+                  id="phone"
+                />
+                <p class="modal-field-icon">
+                  <svg class="icon-modal" width="12px" height="12px">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                  </svg>
+                </p>
               </div>
               <div class="modal-field">
                 <label class="modal-name-field" for="email">Email</label>
-                <input class="modal-type-field" type="email" name="email" id="email" />
+                <input
+                  class="modal-type-field"
+                  type="email"
+                  name="email"
+                  placeholder=" "
+                  id="email"
+                />
+                <p class="modal-field-icon">
+                  <svg class="icon-modal" width="12px" height="12px">
+                    <use href="./images/icons.svg#icon-email"></use>
+                  </svg>
+                </p>
               </div>
               <div class="modal-field">
                 <label class="modal-name-field" for="comment">Comment</label>
-                <textarea name="comment" rows="1" placeholder="Text input" id="comment"></textarea>
+                <textarea
+                  class="modal-type-field"
+                  name="comment"
+                  rows="1"
+                  placeholder="Text input"
+                  id="comment"
+                ></textarea>
               </div>
             </form>
             <div class="modal-field privacy-policy">
-              <input type="checkbox" name="yes-no" />
+              <input class="modal-field-checkbox" type="checkbox" name="yes-no" />
+              <p class="modal-checkbox-icon">
+                <svg class="icon-modal" width="16px" height="16px">
+                  <use href="./images/icons.svg#icon-click-ok"></use>
+                </svg>
+              </p>
               <span class="modal-text-privacy"
                 >I accept the terms and conditions of the
                 <a class="modal-text-privacy policy" href="">Privacy Policy</a></span
               >
             </div>
             <div class="modal-button-send">
-              <button class="modal-send" type="button">Send</button>
+              <button class="modal-send" type="submit">Send</button>
             </div>
           </div>
         </div>
@@ -423,7 +461,7 @@
           <p class="subscribe-text">Subscribe</p>
           <div class="subscribe-block-input">
             <input type="text" class="subscribe-input" placeholder="E-mail" />
-            <button type="button" class="button-subscribe">
+            <button type="submit" class="button-subscribe">
               <p class="button-subscribe-text">Subscribe</p>
               <svg class="button-subscribe-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-subscribe"></use>
