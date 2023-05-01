@@ -868,19 +868,18 @@ a {
 .modal-checkbox-icon {
   width: 16px;
   height: 16px;
+  background-origin: border-box;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  color: var(--text-color);
-  background-color: var(--color-sec-font);
-  background-image: url('../images/icons.svg#icon-check');
+  color: var(--color-sec-font);
+  background-image: url('../images/icons.svg#icon-click-no');
+  background-size: contain;
 }
 
 .modal-field-checkbox:checked + .modal-checkbox-icon {
   background-origin: border-box;
-  color: var(--color-sec-font);
-  fill: var(--butt-color-hover);
-  /* background-color: var(--butt-color-hover); */
-  background-image: url('../images/icons.svg#icon-check');
+  color: var(--butt-color-hover);
+  background-image: url('../images/icons.svg#icon-click-ok');
   background-size: contain;
 }
 
