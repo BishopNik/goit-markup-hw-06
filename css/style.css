@@ -869,18 +869,18 @@ a {
   width: 16px;
   height: 16px;
   background-origin: border-box;
+  background-image: url('../images/icon/click-no.svg');
+  background-size: contain;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  color: var(--color-sec-font);
-  background-image: url('../images/icons.svg#icon-click-no');
-  background-size: contain;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-field-checkbox:checked + .modal-checkbox-icon {
   background-origin: border-box;
-  color: var(--butt-color-hover);
-  background-image: url('../images/icons.svg#icon-click-ok');
+  background-image: url('../images/icon/click-yes.svg');
   background-size: contain;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text-privacy {
